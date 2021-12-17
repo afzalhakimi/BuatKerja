@@ -8,7 +8,7 @@ namespace BuatKerja.Models
     {
         public string Title { get; set; }
         public string ImageUrl { get; set; }
-        public double Rating { get; set; }
+        public string Rating { get; set; }
         public int Year { get; set; }
         public string Synopsis { get; set; }
     }

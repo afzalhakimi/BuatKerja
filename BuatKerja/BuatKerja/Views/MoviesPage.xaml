@@ -6,18 +6,19 @@
     <ContentPage.BindingContext>
         <viewmodels:MovieViewModel/>
     </ContentPage.BindingContext>
-    <StackLayout>
+    <StackLayout BackgroundColor="#1c1b2e">
         <CarouselView ItemsSource="{Binding Movie}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Frame BackgroundColor="Black">
-                            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                        <Frame BackgroundColor="#1c1b2e">
+                            <StackLayout>
                                 <Image Source="{Binding ImageUrl}"
                                    HeightRequest="200"
                                    WidthRequest="420"
                                    HorizontalOptions="CenterAndExpand"
-                                       VerticalOptions="StartAndExpand"/>
+                                       VerticalOptions="StartAndExpand"
+                                       Aspect="AspectFill"/>
 
                             </StackLayout>
                         </Frame>
@@ -25,11 +26,51 @@
                        IndicatorsShape="Square"
                        IndicatorColor="LightGray"
                        SelectedIndicatorColor="DarkGray"
-                       HorizontalOptions="Center"
-                       Margin="0,0,0,40" />
+                       HorizontalOptions="Center"/>
                     </StackLayout>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
+        <CollectionView ItemsSource="{Binding Movie}"
+                        ItemsLayout="VerticalGrid, 2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="30,0,10,5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35" />
+                            <RowDefinition Height="35" />
+                            <RowDefinition Height="17" />
+                            <RowDefinition Height="15" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="130" />
+                            <ColumnDefinition Width="80" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="2" 
+                               Source="{Binding ImageUrl}" 
+                               Aspect="AspectFill"
+                               HeightRequest="60" 
+                               WidthRequest="60" />
+                        <Label Grid.Column="0"
+                               Grid.Row="2"
+                               Text="{Binding Title}" 
+                               FontAttributes="Bold"
+                               LineBreakMode="TailTruncation" TextColor="White"/>
+                        <Label Grid.Row="3"
+                               Grid.Column="0" 
+                               Text="{Binding Year}"
+                               LineBreakMode="TailTruncation"
+                               FontAttributes="Italic" 
+                               TextColor="White"/>
+                        <Label Grid.Row="4"
+                               Grid.Column="0" 
+                               Text="{Binding Rating}"
+                               LineBreakMode="TailTruncation"
+                               FontAttributes="Italic" 
+                               TextColor="White"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
 </ContentPage>
