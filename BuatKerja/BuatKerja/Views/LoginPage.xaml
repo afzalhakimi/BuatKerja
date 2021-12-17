@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BuatKerja.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Frame CornerRadius="20"  BackgroundColor="FloralWhite" Margin="10">
+                <Label Text="BuatKerja" FontSize="22" HorizontalTextAlignment="Center" TextColor="Blue"/>
+            </Frame>
+            
+            <Label Text="Username:"/>
+            <Entry x:Name="UsernameBox" Placeholder="Username"/>
+            <Label Text="Password"/>
+            <Entry IsPassword="True" Placeholder="Password"/>
+            <Button VerticalOptions="Center" Text="Login" Clicked="Button_Clicked"/>
+            <Label Text="Register" HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

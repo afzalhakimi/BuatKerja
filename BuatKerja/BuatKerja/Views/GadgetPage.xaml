@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:BuatKerja.ViewModels"
+             x:Class="BuatKerja.Views.GadgetPage">
+    <ContentPage.BindingContext>
+        <viewmodels:GadgetViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <CarouselView ItemsSource="{Binding Gadget}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                           BorderColor="DarkGray"
+                           CornerRadius="5"
+                           Margin="2"
+                           HeightRequest="200"
+                           HorizontalOptions="Center"
+                           VerticalOptions="StartAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Name}"
+                                   FontAttributes="Bold"
+                                   FontSize="Large"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                                <Image Source="{Binding ImageUrl}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="200"
+                                   WidthRequest="370"
+                                   HorizontalOptions="Center" />
+                                <Label Text="{Binding Location}"
+                                   HorizontalOptions="Center" />
+                                <Label Text="{Binding Details}"
+                                   FontAttributes="Italic"
+                                   HorizontalOptions="Center"
+                                   MaxLines="5"
+                                   LineBreakMode="TailTruncation" />
+                            </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+    <IndicatorView x:Name="indicatorView"
+                       IndicatorsShape="Square"
+                       IndicatorColor="LightGray"
+                       SelectedIndicatorColor="DarkGray"
+                       HorizontalOptions="Center"
+                       Margin="0,0,0,40" />
+</StackLayout>
+
+</ContentPage>

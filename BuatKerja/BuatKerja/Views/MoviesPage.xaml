@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:BuatKerja.ViewModels"
+             x:Class="BuatKerja.Views.MoviesPage">
+    <ContentPage.BindingContext>
+        <viewmodels:MovieViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <CarouselView ItemsSource="{Binding Movie}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame BackgroundColor="Black">
+                            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                                <Image Source="{Binding ImageUrl}"
+                                   HeightRequest="200"
+                                   WidthRequest="420"
+                                   HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="StartAndExpand"/>
+
+                            </StackLayout>
+                        </Frame>
+                        <IndicatorView x:Name="indicatorView"
+                       IndicatorsShape="Square"
+                       IndicatorColor="LightGray"
+                       SelectedIndicatorColor="DarkGray"
+                       HorizontalOptions="Center"
+                       Margin="0,0,0,40" />
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+</ContentPage>
