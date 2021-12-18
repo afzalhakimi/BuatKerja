@@ -3,24 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BuatKerja.ViewModels;
-using BuatKerja.Models;
+using MediaManager.Forms;
+using MediaManager;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using BuatKerja.Models;
+using BuatKerja.ViewModels;
 
 namespace BuatKerja.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MoviesPage : ContentPage
+    public partial class MoviesDetailPage : ContentPage
     {
-        public MoviesPage()
+        public MoviesDetailPage()
         {
             InitializeComponent();
-        }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new MoviesDetailPage());
         }
     }
 }

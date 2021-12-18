@@ -50,7 +50,11 @@
                                Source="{Binding ImageUrl}" 
                                Aspect="AspectFill"
                                HeightRequest="60" 
-                               WidthRequest="60" />
+                               WidthRequest="60">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Label Grid.Column="0"
                                Grid.Row="2"
                                Text="{Binding Title}" 

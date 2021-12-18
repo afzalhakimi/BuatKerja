@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BuatKerja.Models"
+             x:Class="BuatKerja.Views.MoviesDetailPage"
+             xmlns:forms="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms" xmlns:viewmodels="clr-namespace:BuatKerja.ViewModels" >
+    <ContentPage.BindingContext>
+        <viewmodels:MovieViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <forms:VideoView x:Name="videoview" HeightRequest="230"  
+                             WidthRequest="450"
+                                 VideoAspect="AspectFit"
+                         ShowControls="True">
+        </forms:VideoView>
+    </StackLayout>
+</ContentPage>
