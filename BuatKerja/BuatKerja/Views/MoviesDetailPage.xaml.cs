@@ -7,8 +7,6 @@ using MediaManager.Forms;
 using MediaManager;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using BuatKerja.Models;
-using BuatKerja.ViewModels;
 
 namespace BuatKerja.Views
 {

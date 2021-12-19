@@ -26,7 +26,7 @@ namespace BuatKerja.ViewModels
                 VideoUrl = "",
                 Genre = "Action",
                 Rating = "6.4 / 10",
-                Year = 2021,
+                Year = "2021",
                 Synopsis = "An Interpol agent tracks the world's most wanted art thief."
             });
 
@@ -37,7 +37,7 @@ namespace BuatKerja.ViewModels
                 VideoUrl = "",
                 Genre = "Science Fiction",
                 Rating = "7.2 / 10",
-                Year = 2021,
+                Year = "2021",
                 Synopsis = "A bank teller discovers that he's actually an NPC inside a brutal, open world video game."
             });
 
@@ -49,7 +49,7 @@ namespace BuatKerja.ViewModels
                 VideoUrl = "https://www.ahecdynamics.com.my/movies/Mortal_Kombat_(2021).mkv",
                 Genre = "Action",
                 Rating = "6.1/10",
-                Year = 2021,
+                Year = "2021",
                 Synopsis= "MMA fighter Cole Young seeks out Earth's greatest champions in order to stand against the enemies of Outworld in a high stakes battle for the universe."
             });
 
@@ -60,7 +60,7 @@ namespace BuatKerja.ViewModels
                 VideoUrl = "",
                 Genre = "Action",
                 Rating = "6.0 / 10",
-                Year = 2021,
+                Year = "2021",
                 Synopsis = "Eddie Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution."
             });
 
@@ -71,7 +71,7 @@ namespace BuatKerja.ViewModels
                 VideoUrl = "",
                 Genre = "Action",
                 Rating = "7.4 / 10",
-                Year = 2021,
+                Year = "2021",
                 Synopsis = "James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology."
             });
 
@@ -82,7 +82,7 @@ namespace BuatKerja.ViewModels
                 VideoUrl = "",
                 Genre = "Horror",
                 Rating = "6.3 / 10",
-                Year = 2021,
+                Year = "2021",
                 Synopsis = "The Warrens investigate a murder that may be linked to a demonic possession."
             });
         }

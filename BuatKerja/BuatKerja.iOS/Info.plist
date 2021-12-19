@@ -23,7 +23,7 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>BuatKerja</string>
+	<string>ClickBest</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.companyname.BuatKerja</string>
 	<key>CFBundleVersion</key>
@@ -33,6 +33,6 @@
 	<key>CFBundleName</key>
 	<string>BuatKerja</string>
 	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcons.appiconset</string>
+	<string>Assets.xcassets/AppIcons1.appiconset</string>
 </dict>
 </plist>

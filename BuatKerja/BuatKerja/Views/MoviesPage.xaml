@@ -4,10 +4,10 @@
              xmlns:viewmodels="clr-namespace:BuatKerja.ViewModels"
              x:Class="BuatKerja.Views.MoviesPage">
     <ContentPage.BindingContext>
-        <viewmodels:MovieViewModel/>
+        <viewmodels:MovieListViewModel/>
     </ContentPage.BindingContext>
     <StackLayout BackgroundColor="#1c1b2e">
-        <CarouselView ItemsSource="{Binding Movie}">
+        <CarouselView ItemsSource="{Binding WatchList}">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
@@ -31,8 +31,10 @@
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-        <CollectionView ItemsSource="{Binding Movie}"
-                        ItemsLayout="VerticalGrid, 2">
+        <CollectionView x:Name="moviesColView" ItemsSource="{Binding WatchList}"
+                        ItemsLayout="VerticalGrid, 2"
+                        SelectedItem="{Binding SelectedMovie}"
+                        SelectionMode="Single" SelectionChangedCommand="{Binding SelectionCommand}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="30,0,10,5">
@@ -51,9 +53,6 @@
                                Aspect="AspectFill"
                                HeightRequest="60" 
                                WidthRequest="60">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
-                            </Image.GestureRecognizers>
                         </Image>
                         <Label Grid.Column="0"
                                Grid.Row="2"

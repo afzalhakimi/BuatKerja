@@ -11,7 +11,8 @@ namespace BuatKerja.Models
         public string VideoUrl { get; set; }
         public string Genre { get; set; }
         public string Rating { get; set; }
-        public int Year { get; set; }
+        public string Year { get; set; }
         public string Synopsis { get; set; }
+        public bool IsFeatured { get; set; }
     }
 }
