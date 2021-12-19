@@ -37,48 +37,6 @@ namespace BuatKerja.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
-        public override void OnConfigurationChanged(Android.Content.Res.Configuration newConfig)
-        {
-            base.OnConfigurationChanged(newConfig);
-
-            switch (newConfig.Orientation)
-            {
-                case Orientation.Landscape:
-                    switch (Device.Idiom)
-                    {
-                        case TargetIdiom.Phone:
-                            LockRotation(Orientation.Portrait);
-                            break;
-                        case TargetIdiom.Tablet:
-                            LockRotation(Orientation.Landscape);
-                            break;
-                    }
-                    break;
-                case Orientation.Portrait:
-                    switch (Device.Idiom)
-                    {
-                        case TargetIdiom.Phone:
-                            LockRotation(Orientation.Portrait);
-                            break;
-                        case TargetIdiom.Tablet:
-                            LockRotation(Orientation.Landscape);
-                            break;
-                    }
-                    break;
-            }
-        }
-
-        private void LockRotation(Orientation orientation)
-        {
-            switch (orientation)
-            {
-                case Orientation.Portrait:
-                    RequestedOrientation = ScreenOrientation.Portrait;
-                    break;
-                case Orientation.Landscape:
-                    RequestedOrientation = ScreenOrientation.Landscape;
-                    break;
-            }
-        }
+        
     }
 }
